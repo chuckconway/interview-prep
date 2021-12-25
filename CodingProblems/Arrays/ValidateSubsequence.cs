@@ -5,18 +5,17 @@ using System.Linq;
 
 namespace CodingProblems.Arrays
 {
-
     public class ValidateSubsequence
     {
         [Fact]
         public void Solution_One()
         {
-            var hasSubseqence = Calculate(new List<int>{2,3,4,5,6,}, new List<int>{3,6});
+            var hasSubsequence = Calculate(new List<int>{2,3,4,5,6,}, new List<int>{3,6});
 
-            Assert.True(hasSubseqence);
+            Assert.True(hasSubsequence);
         }
 
-        public bool Calculate(List<int> array, List<int> sequence)
+        private bool Calculate(List<int> array, List<int> sequence)
         {
             var currentPosition = 0;
 
