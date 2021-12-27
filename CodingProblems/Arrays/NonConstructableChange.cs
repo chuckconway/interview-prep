@@ -23,6 +23,7 @@ public class NonConstructableChange
 
     public int Calculate(int[] coins)
     {
+        // N Log(N)
         Array.Sort(coins);
 
         var change = 0;
