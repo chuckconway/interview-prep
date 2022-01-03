@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using Xunit;
 using Xunit.Abstractions;
@@ -34,34 +34,49 @@ public class FourNumberSum
         {
             var allPairSums = new Dictionary<int, List<int[]>>();
 
-            for (var index = 0; index < array.Length; index++)
+            for (var index = 1; index < array.Length -1; index++)
             {
                 var pointerValue = array[index];
 
-                //
-                for (var addToDictionaryIndex = index + 1; addToDictionaryIndex < array.Length; addToDictionaryIndex++)
+                //Check to see if missing difference is in the allPairSums dictionary, if it is add it to the results.
+                for (var addToResultsIndex = index + 1; addToResultsIndex < array.Length; addToResultsIndex++)
                 {
-                    
+                    var currentValue = array[addToResultsIndex];
+                    var currentSum = currentValue + pointerValue;
+                    var difference = targetSum - currentSum;
+
+                    if (allPairSums.ContainsKey(difference))
+                    {
+                        var pairs = allPairSums[difference];
+
+                        foreach (var pair in pairs)
+                        {
+                            var quadruplet = pair.Concat(new[] {pointerValue, currentValue});
+                            results.Add(quadruplet.ToArray());
+                        }
+                    }
                 }
 
-                for (var innerIndex = 0; innerIndex < array.Length; innerIndex++)
+                // Add values to the allPairsSums dictionary
+                for (var addToDictionaryIndex = 0; addToDictionaryIndex < index; addToDictionaryIndex++)
                 {
-                    if (index != innerIndex)
+                    var currentValue = array[addToDictionaryIndex];
+                    var currentSum = currentValue + pointerValue;
+
+                    if (allPairSums.ContainsKey(currentSum))
                     {
-                        var innerPointerValue = array[innerIndex];
-                        var summedValue = pointerValue + innerPointerValue;
-
-                        AddSumToDictionary(innerIndex, index, dictionary, summedValue, pointerValue, innerPointerValue);
-
-                        var missingSum = targetSum - summedValue;
-
-                        AddSumsThatEqualTargetSum(innerIndex, index, dictionary, missingSum, pointerValue, innerPointerValue, result);
+                        var summedValues = allPairSums[currentSum];
+                        summedValues.Add(new[] {pointerValue, currentValue});
+                    }
+                    else
+                    {
+                        allPairSums.Add(currentSum, new List<int[]> { new[] {pointerValue, currentValue}} );
                     }
                 }
             }
         }
 
-        return result;
+        return results;
     }
 
     private static void AddSumsThatEqualTargetSum(
