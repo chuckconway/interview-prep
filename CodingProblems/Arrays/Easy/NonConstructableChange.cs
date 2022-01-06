@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CodingProblems.Arrays;
+namespace CodingProblems.Arrays.Easy;
 
 public class NonConstructableChange
 {
