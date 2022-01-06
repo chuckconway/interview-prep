@@ -78,49 +78,4 @@ public class FourNumberSum
 
         return results;
     }
-
-    private static void AddSumsThatEqualTargetSum(
-        int innerIndex, 
-        int index, 
-        IReadOnlyDictionary<int, List<int[]>> dictionary, 
-        int missingSum,
-        int pointerValue, 
-        int innerPointerValue, 
-        ICollection<int[]> result)
-    {
-        if (innerIndex > index && dictionary.ContainsKey(missingSum))
-        {
-            var pairs = dictionary[missingSum];
-
-            foreach (var pair in pairs)
-            {
-                var digits = new List<int>();
-                digits.AddRange(new[] {pointerValue, innerPointerValue});
-                digits.AddRange(pair);
-
-                result.Add(digits.ToArray());
-            }
-        }
-    }
-
-    private static void AddSumToDictionary(
-        int innerIndex, 
-        int index, 
-        Dictionary<int, List<int[]>> dictionary, 
-        int summedValue,
-        int pointerValue, int innerPointerValue)
-    {
-        if (innerIndex < index)
-        {
-            if (dictionary.ContainsKey(summedValue))
-            {
-                var summedValues = dictionary[summedValue];
-                summedValues.Add(new[] {pointerValue, innerPointerValue});
-            }
-            else
-            {
-                dictionary.Add(summedValue, new List<int[]> {new[] {pointerValue, innerPointerValue}});
-            }
-        }
-    }
 }
