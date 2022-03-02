@@ -25,15 +25,15 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="BinarySearchTrees" />
-      <Folder Include="Graphs" />
-      <Folder Include="HashMaps" />
-      <Folder Include="Heaps" />
-      <Folder Include="LinkedLists" />
-      <Folder Include="Queues" />
-      <Folder Include="Stacks" />
-      <Folder Include="Strings" />
-      <Folder Include="Trees" />
+      <Folder Include="DataTypes\BinarySearchTrees" />
+      <Folder Include="DataTypes\Graphs" />
+      <Folder Include="DataTypes\HashMaps" />
+      <Folder Include="DataTypes\Heaps" />
+      <Folder Include="DataTypes\LinkedLists" />
+      <Folder Include="DataTypes\Queues" />
+      <Folder Include="DataTypes\Stacks" />
+      <Folder Include="DataTypes\Strings" />
+      <Folder Include="DataTypes\Trees" />
     </ItemGroup>
 
 </Project>

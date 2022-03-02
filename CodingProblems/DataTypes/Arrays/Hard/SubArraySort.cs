@@ -17,5 +17,7 @@ public class SubArraySort
         {
             
         }
+
+        return new[] {0};
     }
 }
