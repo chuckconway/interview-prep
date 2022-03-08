@@ -1,11 +1,6 @@
-
-
-using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
-using System.Security.Cryptography;
 using Xunit;
 
-namespace CodingProblems.Arrays.Medium;
+namespace CodingProblems.DataTypes.Arrays.Medium;
 
 public class LongestPeak
 {

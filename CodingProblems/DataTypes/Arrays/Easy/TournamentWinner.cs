@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CodingProblems.Arrays.Easy;
+namespace CodingProblems.DataTypes.Arrays.Easy;
 
 public class TournamentWinner
 {

@@ -1,6 +1,6 @@
 using Xunit;
 
-namespace CodingProblems.Arrays.Hard;
+namespace CodingProblems.DataTypes.Arrays.Hard;
 
 public class SubArraySort
 {

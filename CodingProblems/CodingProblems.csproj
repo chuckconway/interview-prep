@@ -25,7 +25,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="DataTypes\BinarySearchTrees" />
+      <Folder Include="DataTypes\BinarySearchTrees\Hard" />
+      <Folder Include="DataTypes\BinarySearchTrees\Medium" />
       <Folder Include="DataTypes\Graphs" />
       <Folder Include="DataTypes\HashMaps" />
       <Folder Include="DataTypes\Heaps" />

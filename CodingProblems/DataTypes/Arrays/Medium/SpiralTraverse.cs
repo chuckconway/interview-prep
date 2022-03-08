@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Xunit;
 
-namespace CodingProblems.Arrays.Medium;
+namespace CodingProblems.DataTypes.Arrays.Medium;
 
 public class SpiralTraverse
 {

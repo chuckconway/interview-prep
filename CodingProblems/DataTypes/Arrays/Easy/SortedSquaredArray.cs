@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace CodingProblems.Arrays.Easy;
+namespace CodingProblems.DataTypes.Arrays.Easy;
 
 public class SortedSquaredArray
 {

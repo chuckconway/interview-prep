@@ -4,7 +4,7 @@ using System.Text.Json;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CodingProblems.Arrays.Hard;
+namespace CodingProblems.DataTypes.Arrays.Hard;
 
 public class FourNumberSum
 {

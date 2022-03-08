@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using Xunit;
 
-namespace CodingProblems.Arrays.Medium;
+namespace CodingProblems.DataTypes.Arrays.Medium;
 
 public class SmallestDifference
 {

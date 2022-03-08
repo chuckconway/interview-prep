@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace CodingProblems.Arrays.Easy 
+namespace CodingProblems.DataTypes.Arrays.Easy 
 {
 
 /// <summary>
