@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using Xunit;
 
 namespace CodingProblems.DataTypes.BinarySearchTrees.Easy;
@@ -8,19 +9,25 @@ public class FindClosestValue
     [Fact]
     public void Calculate()
     {
-        
+        var bst = TestData();
+        var nearest = Solution_One(bst, 10);
     }
 
-    public int Solution_One(BST tree, int target, int closestValue = int.MaxValue)
+    public static int Solution_One(BST tree, int target, int closestValue = int.MaxValue)
     {
-        if(closestValue == target)
+        if (tree == null)
         {
             return closestValue;
         }
         
-        if (closestValue > tree.value - target)
+        if (closestValue >= Math.Abs(tree.value - target))
         {
             closestValue = tree.value;
+        }
+        
+        if(closestValue == target)
+        {
+            return closestValue;
         }
         
         var leftDifference = tree.left.value - target;
